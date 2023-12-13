@@ -23,4 +23,6 @@ object Build {
     Test / packageBin / publishArtifact := false,
     Compile / packageDoc / publishArtifact := false
   )
+
+  val scalaTest = "org.scalatest" %% "scalatest" % "3.2.15" % "test"
 }

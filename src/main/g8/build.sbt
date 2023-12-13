@@ -18,8 +18,18 @@ lazy val root = (project in file("."))
 lazy val core = (project in file("core"))
   .settings(name := "$name$-core")
   .settings(publishSettings)
+  .settings(
+    libraryDependencies ++= Seq(
+      scalaTest
+    )
+  )
 
 lazy val api = (project in file("api"))
   .settings(name := "$name$-api")
   .settings(publishSettings)
+  .settings(
+    libraryDependencies ++= Seq(
+      scalaTest
+    )
+  )
   .dependsOn(core)
