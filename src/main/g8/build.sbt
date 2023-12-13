@@ -22,7 +22,7 @@ lazy val core = (project in file("core"))
     libraryDependencies ++= Seq(
       scalaTest
     )
-  )
+  ).dependsOn(api)
 
 lazy val api = (project in file("api"))
   .settings(name := "$name$-api")
@@ -32,4 +32,3 @@ lazy val api = (project in file("api"))
       scalaTest
     )
   )
-  .dependsOn(core)
