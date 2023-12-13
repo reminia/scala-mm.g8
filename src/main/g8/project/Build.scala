@@ -1,5 +1,5 @@
 import sbt._
-import sbt.Key._
+import sbt.Keys._
 
 object Build {
 

@@ -12,4 +12,4 @@ Global / onChangedBuildSource := ReloadOnSourceChanges
 
 lazy val root = (project in file("."))
   .settings(name := "$name$")
-  .settings(noPublish _)
+  .settings(noPublish)
