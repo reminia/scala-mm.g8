@@ -13,3 +13,13 @@ Global / onChangedBuildSource := ReloadOnSourceChanges
 lazy val root = (project in file("."))
   .settings(name := "$name$")
   .settings(noPublish)
+  .aggregate(core, api)
+
+lazy val core = (project in file("core"))
+  .settings(name := "$name$-core")
+  .settings(publishSettings)
+
+lazy val api = (project in file("api"))
+  .settings(name := "$name$-api")
+  .settings(publishSettings)
+  .dependsOn(core)
