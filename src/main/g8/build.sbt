@@ -1,8 +1,14 @@
-// give the user a nice default project!
-ThisBuild / organization := "com.example"
-ThisBuild / scalaVersion := "2.12.8"
+version := "0.1.0-SNAPSHOT"
+scalaVersion := "2.13.12"
+organization := "$organization$"
+maintainer := "$email$"
+val javaVersion = "11"
 
-lazy val root = (project in file(".")).
-  settings(
-    name := "scala-mm.g8"
+javacOptions ++= Seq("-source", javaVersion, "-target", javaVersion)
+
+Global / onChangedBuildSource := ReloadOnSourceChanges
+
+lazy val root = (project in file("."))
+  .settings(
+    name := "$name$"
   )
